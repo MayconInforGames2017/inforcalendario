@@ -3,6 +3,11 @@
     <ion-title>
       InforCalendario 
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCalendarioModal()">
+        <ion-icon name="add" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -18,6 +23,19 @@
       <ion-label>Dia</ion-label>
     </ion-segment-button>
   </ion-segment>
+
+  <ion-row>
+    <ion-col size="6">
+      <ion-button (click)="createRandomEvents()" expand="block" fill="outline">
+        Adicionar eventos
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button (click)="removeEvents()" expand="block" fill="outline">
+        Excluir eventos
+      </ion-button>
+    </ion-col>
+  </ion-row>
 
   <ion-row>
 
