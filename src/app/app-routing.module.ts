@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'calendario-modal',
+    loadChildren: () => import('./pages/calendario-modal/calendario-modal.module').then( m => m.CalendarioModalPageModule)
+  },
 ];
 
 @NgModule({
